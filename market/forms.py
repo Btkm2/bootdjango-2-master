@@ -1,7 +1,7 @@
 from django import forms
 from string import Template
 from django.utils.safestring import mark_safe
-from .models import Products
+from .models import *
 from django.forms import ModelForm, fields, TextInput, widgets, Textarea, ImageField, FileInput
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User

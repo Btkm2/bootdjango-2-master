@@ -59,6 +59,7 @@
                     {% comment %} {{ form.title }}<br>
                     {{ form.prod_decription }}<br> {% endcomment %}
                     <h5> {{ product.title }}</h5><br>
+                    <div> <img src='{{ product.prod_image.url }}'></div><br>
                     <p> {{ product.prod_decription }}</p>
                     <span> {{ error }} </span><br>
                     {% comment %} <input type="text" placeholder="Product name" class="form-control"><br>

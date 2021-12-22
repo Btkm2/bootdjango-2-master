@@ -58,8 +58,10 @@
                     </li>
                     {% if user.is_authenticated %}
                         <li class="nav-item">
-                            <a href="/logout" class="nav-link">
-                                <i class="material-icons">logout</i>
+                            <a href="/logout" class="nav-link" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                {% comment %} <button  data-bs-toggle="modal" data-bs-target="#exampleModal"> {% endcomment %}
+                                    <i class="material-icons">logout</i>
+                                  {% comment %} class="btn btn-primary" {% endcomment %}
                             </a>
                         </li>
                     {% endif %}
@@ -67,6 +69,26 @@
             </div>
         </div>
     </nav>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Logout</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p> Are you sure to logout from your account?</p>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            {% comment %} <button type="button" class="btn btn-primary">Save changes</button> {% endcomment %}
+            <a href="/logout" class="btn btn-success">Logout</a>
+            </div>
+        </div>
+        </div>
+    </div>
     <!-- leftnavbar -->
     <!-- <nav class="navbar navbar-expand-md bg-light navbar-dark fixed-left">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">

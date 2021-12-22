@@ -146,3 +146,5 @@ CRISPY_TEMPLATE_PACK="bootstrap4"
 
 LOGIN_REDIRECT_URL = "/main"
 LOGOUT_REDIRECT_URL = "/main"
+
+# AUTH_USER_MODEL = 'market.Customer'
