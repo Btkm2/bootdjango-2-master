@@ -27,6 +27,9 @@ def team_members(request):
 def profile_page(request):
     return render(request, 'shop/profile.html', {})
 
+def delivery_page(request):
+    return render(request, 'shop/delivery.html', {})
+
 def main_page(request):
     catalogue = ({})
     prods = Products.objects.all()

@@ -33,11 +33,13 @@
                             <i class="material-icons">notifications</i>
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a href="create_product" class="nav-link">
-                            <i class="material-icons">control_point</i>
-                        </a>
-                    </li>
+                    {% if user.get_username == "admin" %}
+                        <li class="nav-item">
+                            <a href="create_product" class="nav-link">
+                                <i class="material-icons">control_point</i>
+                            </a>
+                        </li>
+                    {% endif %}
                     <li class="nav-item">
                         <a class="btn btn-primary" href="/login" role="button">Войти</a>
                     </li>
@@ -65,8 +67,27 @@
                     {% comment %} <input type="text" placeholder="Product name" class="form-control"><br>
                     <input type="file" placeholder="Product image" class="form-control"><br>
                     <input type="text" placeholder="Product description" class="form-control"><br> {% endcomment %}
-                    <button class="btn btn-success" type="submit">Delete product</button>
+                    <button type="submit" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">Delete product</button>
                 </form>
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Logout</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <p> Are you sure to logout from your account?</p>
+                                </div>
+                                <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                {% comment %} <button type="button" class="btn btn-primary">Save changes</button> {% endcomment %}
+                                <button class="btn btn-success" type="submit">Delete</button>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
                                     {% comment %} {{ form.prod_image }}<br> {% endcomment %}
             </div>
         </div>
