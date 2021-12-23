@@ -112,8 +112,9 @@ body{
     width: 100%;
 }
 .col-sm-2 a:hover{
-    background-color: #EBF4E1;
+    background-color: #17C878;
     border-color: #17C878;
+    color: white;
 }
 .col-sm-4{
     border-style: solid;
@@ -180,7 +181,7 @@ body{
 }
 #newprodlink a:hover{
     border-color: #17C878;
-    color: #17C878;
+    color:white
 }
 .newproducts .row{
     margin: 1rem;
@@ -191,6 +192,11 @@ body{
     height: 220px;
     background-color: white;
     border-color: white;
+}
+#addtocard{
+    border-color: #17C878;
+    background-color: white;
+    color: #17C878;
 }
 .tvorog{
     border-style: solid;
@@ -234,8 +240,26 @@ body{
     border-style: solid;
     border-width: 0%;
     border-color: #17C878;
-    margin-left: 15rem;
-    margin-bottom: 3rem;
+    margin-left: 14rem;
+    margin-top: -3rem;
+    border-color: #17C878;
+    background-color: white;
+    color: #17C878;
+}
+#addtocard:hover{
+    background-color: #17C878;
+    color: white;
+    border-color: #17C878;
+}
+#all_products{
+    border-color: #17C878;
+    background-color: white;
+    color: #17C878;
+}
+#all_products:hover{
+    background-color: #17C878;
+    color: white;
+    border-color: #17C878;
 }
 .catalogue{
     border-width: 0%;
